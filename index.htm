@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>University Website Design</title>
 </head>
 <body>
     <section class="header">
         <nav>
             <a href="index.htm"><img src="images/logo.png" alt="" srcset=""></a>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="">ABOUT</a></li>
@@ -20,12 +22,24 @@
                     <li><a href="">CONTACT</a></li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
         </nav>
-    <div class="text-box">
-        <h1>World's Biggest University</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsa nostrum saepe fugit commodi molestias praesentium, laudantium nam tempore quo provident cupiditate quaerat reprehenderit temporibus cum. Adipisci a omnis laboriosam.</p>
-        <a href="">Vist Us to know more</a>
-    </div>
+        <div class="text-box">
+            <h1>World's Biggest University</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ipsa nostrum saepe fugit commodi molestias praesentium, laudantium nam tempore quo provident cupiditate quaerat reprehenderit temporibus cum. Adipisci a omnis laboriosam.</p>
+            <a class="hero-btn" href="">Vist Us to know more</a>
+        </div>
     </section>
+<!--Javscript for Toggle Menu-->
+    <script>
+        var navLinks=document.getElementById("navLinks")
+        function showMenu(){
+            navLinks.style.righ="0";
+        }
+        function hideMenu(){
+            navLinks.style.righ="-200px";
+        }
+    </script>
 </body>
 </html>
